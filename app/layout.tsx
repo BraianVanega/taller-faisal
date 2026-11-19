@@ -20,21 +20,31 @@ const sans = Open_Sans({
 });
 
 const descripcion =
-  "Taller mecánico en Mar del Plata: frenos, tren delantero, escaneo computarizado, aceite y más. Presupuesto previo. Consultas por WhatsApp.";
+  "Taller mecánico en Mar del Plata: alineación y balanceo, frenos, tren delantero, escaneo computarizado, aceite y más. Presupuesto previo y consultas por WhatsApp.";
+
+const titulo = "Taller mecánico en Mar del Plata | Centro de Servicio Faisal";
+const portada = { url: "/fotos/portada.jpg", alt: "Centro de Servicio Faisal, taller mecánico en Mar del Plata" };
 
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
-  title: "Taller mecánico en Mar del Plata | Centro de Servicio Faisal",
+  title: titulo,
   description: descripcion,
+  applicationName: site.nombre,
+  category: "automotive",
+  robots: { index: true, follow: true, googleBot: { index: true, follow: true, "max-image-preview": "large" } },
   alternates: { canonical: "/" },
   openGraph: {
     type: "website",
     locale: "es_AR",
     url: site.url,
     siteName: site.nombre,
-    title: "Taller mecánico en Mar del Plata | Centro de Servicio Faisal",
+    title: titulo,
     description: descripcion,
+    images: [portada],
   },
+  twitter: { card: "summary_large_image", title: titulo, description: descripcion, images: [portada.url] },
+  // [GOOGLE SEARCH CONSOLE] cuando Braian verifique el dominio, pegar acá el código que da Google:
+  // verification: { google: "CODIGO" },
 };
 
 export const viewport: Viewport = {
