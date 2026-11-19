@@ -1,17 +1,17 @@
+import Image from "next/image";
 import { IconInstagram } from "@/components/icons";
 import { Reveal } from "@/components/ui/motion";
-import { Placeholder } from "@/components/ui/placeholder";
 import { Seccion, TituloSeccion } from "@/components/ui/titulo";
 import { site } from "@/data/site";
 
-// [FOTOS Y VIDEOS REALES] reemplazar cuando lleguen (sin patentes ni datos de clientes).
+// Fotos en public/fotos. El nombre tiene que coincidir exacto, con .JPG en mayúscula.
 const TRABAJOS = [
-  { label: "VIDEO · Cambio de resortes", video: true },
-  { label: "FOTO · Amortiguador nuevo", video: false },
-  { label: "VIDEO · El mecánico trabajando", video: true },
-  { label: "FOTO · Frenos", video: false },
-  { label: "VIDEO · Diagnóstico", video: true },
-  { label: "FOTO · Tren delantero", video: false },
+  { src: "/fotos/foto1.JPG", alt: "Mecánico revisando la rueda de una camioneta en el elevador" },
+  { src: "/fotos/foto2.JPG", alt: "Auto en el elevador con la rueda delantera desmontada" },
+  { src: "/fotos/foto3.JPG", alt: "Mecánico trabajando en el motor de un auto con el capó abierto" },
+  { src: "/fotos/foto4.JPG", alt: "Mecánico de Faisal revisando un auto en el elevador" },
+  { src: "/fotos/foto5.JPG", alt: "Camioneta roja levantada en el elevador del taller" },
+  { src: "/fotos/foto6.JPG", alt: "Auto en la alineadora del taller" },
 ];
 
 export function Trabajos() {
@@ -20,9 +20,16 @@ export function Trabajos() {
       <Reveal><TituloSeccion etiqueta="Trabajos reales" titulo="Así trabajamos" /></Reveal>
       <ul className="grid grid-cols-2 gap-2 md:grid-cols-3 md:gap-4">
         {TRABAJOS.map((t, i) => (
-          <li key={t.label}>
+          <li key={t.src}>
             <Reveal delay={0.08 * (i % 3)}>
-              <Placeholder label={`[${t.label}]`} video={t.video} className="h-[200px] md:h-[380px]" />
+              <Image
+                src={t.src}
+                alt={t.alt}
+                width={1200}
+                height={1600}
+                sizes="(min-width: 768px) 33vw, 50vw"
+                className="h-[200px] w-full object-cover md:h-[380px]"
+              />
             </Reveal>
           </li>
         ))}
