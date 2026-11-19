@@ -28,7 +28,7 @@ export function Resenas() {
           <div className="flex flex-col gap-1.5">
             <span className="sr-only">{promedio} de 5 estrellas</span>
             <Estrellas size={26} />
-            <a href={site.redes.googleMaps} className="text-base font-bold text-azul-texto md:font-normal md:text-gris md:no-underline">
+            <a href={site.redes.googleMaps} className="link-anim self-start text-base font-bold text-azul-texto md:font-normal md:text-gris md:hover:text-white">
               {site.calificacion.cantidad} opiniones en Google
             </a>
           </div>
@@ -50,7 +50,7 @@ export function Resenas() {
                     {larga && (
                       <button type="button" onClick={() => setAbiertas((a) => ({ ...a, [i]: !a[i] }))}
                         className="min-h-11 self-start text-[15px] font-bold text-azul-texto md:hidden">
-                        {abierta ? "Ver menos" : "Leer completa"}
+                        <span className="link-anim">{abierta ? "Ver menos" : "Leer completa"}</span>
                       </button>
                     )}
                     <footer className="mt-auto flex flex-col gap-1.5 text-sm text-gris md:text-[15px]">
@@ -65,7 +65,7 @@ export function Resenas() {
           <span className="flex items-center gap-2 text-sm text-gris md:hidden">Deslizá para ver más <IconArrow size={16} /></span>
         </div>
 
-        <a href={site.redes.googleMaps} className="hidden self-start text-[17px] font-bold text-azul-texto md:block">
+        <a href={site.redes.googleMaps} className="link-anim hidden self-start text-[17px] font-bold text-azul-texto md:block">
           Ver todas las opiniones en Google
         </a>
       </div>

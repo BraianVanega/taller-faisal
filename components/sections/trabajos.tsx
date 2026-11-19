@@ -28,7 +28,7 @@ export function Trabajos() {
         ))}
       </ul>
       <a href={site.redes.instagramTaller} className="inline-flex items-center gap-2.5 self-start text-[17px] font-bold text-azul-texto">
-        <IconInstagram size={22} />Ver más en @centrodeserviciofaisal
+        <IconInstagram size={22} /><span className="link-anim">Ver más en @centrodeserviciofaisal</span>
       </a>
     </Seccion>
   );
