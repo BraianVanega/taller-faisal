@@ -6,12 +6,12 @@ import { site } from "@/data/site";
 
 // Fotos en public/fotos. El nombre tiene que coincidir exacto, con .JPG en mayúscula.
 const TRABAJOS = [
-  { src: "/fotos/foto1.JPG", alt: "Mecánico revisando la rueda de una camioneta en el elevador" },
-  { src: "/fotos/foto2.JPG", alt: "Auto en el elevador con la rueda delantera desmontada" },
-  { src: "/fotos/foto3.JPG", alt: "Mecánico trabajando en el motor de un auto con el capó abierto" },
-  { src: "/fotos/foto4.JPG", alt: "Mecánico de Faisal revisando un auto en el elevador" },
-  { src: "/fotos/foto5.JPG", alt: "Camioneta roja levantada en el elevador del taller" },
-  { src: "/fotos/foto6.JPG", alt: "Auto en la alineadora del taller" },
+  { src: "/fotos/foto1.jpg", alt: "Mecánico revisando la rueda de una camioneta en el elevador" },
+  { src: "/fotos/foto2.jpg", alt: "Auto en el elevador con la rueda delantera desmontada" },
+  { src: "/fotos/foto3.jpg", alt: "Mecánico trabajando en el motor de un auto con el capó abierto" },
+  { src: "/fotos/foto4.jpg", alt: "Mecánico de Faisal revisando un auto en el elevador" },
+  { src: "/fotos/foto5.jpg", alt: "Camioneta roja levantada en el elevador del taller" },
+  { src: "/fotos/foto6.jpg", alt: "Auto en la alineadora del taller" },
 ];
 
 export function Trabajos() {
