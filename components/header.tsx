@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { m, AnimatePresence } from "motion/react";
+import { m, AnimatePresence, type Variants } from "motion/react";
 import { IconClose, IconMenu, IconPhone } from "@/components/icons";
 import { site } from "@/data/site";
 
@@ -12,6 +12,23 @@ const NAV = [
   { href: "#resenas", label: "Reseñas" },
   { href: "#ubicacion", label: "Ubicación" },
 ];
+
+// Menú de celular: se despliega como una persiana y las secciones entran una por una.
+const ease = [0.22, 1, 0.36, 1] as const;
+const menu: Variants = {
+  cerrado: {
+    clipPath: "inset(0% 0% 100% 0%)",
+    transition: { duration: 0.35, ease, when: "afterChildren", staggerChildren: 0.03, staggerDirection: -1 },
+  },
+  abierto: {
+    clipPath: "inset(0% 0% -12% 0%)",
+    transition: { duration: 0.5, ease, delayChildren: 0.12, staggerChildren: 0.07 },
+  },
+};
+const item: Variants = {
+  cerrado: { opacity: 0, x: -16, transition: { duration: 0.15 } },
+  abierto: { opacity: 1, x: 0, transition: { duration: 0.4, ease } },
+};
 
 function Marca() {
   return (
@@ -55,12 +72,18 @@ export function Header() {
       <AnimatePresence>
         {abierto && (
           <m.nav id="menu-movil" aria-label="Principal"
-            initial={{ opacity: 0, y: -8 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -8 }} transition={{ duration: 0.25 }}
+            variants={menu} initial="cerrado" animate="abierto" exit="cerrado"
             className="absolute inset-x-0 top-full flex flex-col border-y border-linea bg-fondo px-5 pb-3 pt-2 shadow-[0_12px_24px_rgba(0,0,0,0.5)] md:hidden">
             {NAV.map((n) => (
-              <a key={n.href} href={n.href} onClick={cerrar} className="flex min-h-[52px] items-center border-b border-linea text-lg font-semibold text-white no-underline transition-colors duration-200 active:text-azul-texto"><span className="link-anim">{n.label}</span></a>
+              <m.a key={n.href} href={n.href} onClick={cerrar} variants={item}
+                className="flex min-h-[52px] items-center border-b border-linea text-lg font-semibold text-white no-underline transition-colors duration-200 active:text-azul-texto">
+                <span className="link-anim">{n.label}</span>
+              </m.a>
             ))}
-            <a href="#repuestos" onClick={cerrar} className="flex min-h-[52px] items-center text-lg font-bold text-amarillo no-underline"><span className="link-anim">Repuestos Faisal</span></a>
+            <m.a href="#repuestos" onClick={cerrar} variants={item}
+              className="flex min-h-[52px] items-center text-lg font-bold text-amarillo no-underline">
+              <span className="link-anim">Repuestos Faisal</span>
+            </m.a>
           </m.nav>
         )}
       </AnimatePresence>
