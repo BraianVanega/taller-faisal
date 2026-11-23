@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useState } from "react";
 import { m, AnimatePresence, type Variants } from "motion/react";
 import { IconClose, IconMenu, IconPhone } from "@/components/icons";
@@ -33,7 +34,7 @@ const item: Variants = {
 
 function Marca() {
   return (
-    <a href="#inicio" aria-label={`${site.nombre}, inicio`} className="flex flex-col leading-none text-white no-underline transition-opacity duration-200 hover:opacity-80">
+    <Link href="/#inicio" aria-label={`${site.nombre}, inicio`} className="flex flex-col leading-none text-white no-underline transition-opacity duration-200 hover:opacity-80">
       <span className="text-[11px] font-bold tracking-[2.5px] text-[#dce6ff] md:text-xs">CENTRO DE SERVICIO</span>
       <span className="font-display text-[30px] font-black italic tracking-[0.5px] md:text-4xl">FAISAL</span>
     </Link>
@@ -57,7 +58,7 @@ export function Header() {
           {NAV.map((n) => (
             <a key={n.href} href={n.href} className="link-anim text-[15px] font-semibold text-white no-underline hover:text-azul-texto">{n.label}</a>
           ))}
-          <a href="#repuestos" className="link-anim text-[15px] font-bold text-amarillo no-underline">Repuestos</a>
+          <a href="/#repuestos" className="link-anim text-[15px] font-bold text-amarillo no-underline">Repuestos</a>
         </nav>
 
         {/* Celular */}
@@ -81,7 +82,7 @@ export function Header() {
                 <span className="link-anim">{n.label}</span>
               </m.a>
             ))}
-            <m.a href="#repuestos" onClick={cerrar} variants={item}
+            <m.a href="/#repuestos" onClick={cerrar} variants={item}
               className="flex min-h-[52px] items-center text-lg font-bold text-amarillo no-underline">
               <span className="link-anim">Repuestos Faisal</span>
             </m.a>

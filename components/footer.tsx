@@ -19,6 +19,9 @@ function Columna({
   );
 }
 
+// Un dato entre [corchetes] todavía no está confirmado, así que no se muestra.
+const confirmado = (dato: string) => !dato.startsWith("[");
+
 export async function Footer() {
   "use cache"; // el pie se guarda ya armado; el año se renueva en cada publicación
   const anio = new Date().getFullYear();
@@ -62,9 +65,11 @@ export async function Footer() {
           <span className="text-sm text-gris">
             © {anio} {site.nombre}. Todos los derechos reservados.
           </span>
-          <span className="text-sm text-gris">
-            Repuestos Faisal: {site.legal.razonSocialRepuestos}
-          </span>
+          {confirmado(site.legal.razonSocialRepuestos) && (
+            <span className="text-sm text-gris">
+              Repuestos Faisal: {site.legal.razonSocialRepuestos}
+            </span>
+          )}
         </div>
       </div>
     </footer>
