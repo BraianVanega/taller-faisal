@@ -82,8 +82,6 @@ export const site = {
   legal: {
     razonSocialTaller: "Rodrigo Faisal",
     cuitTaller: "20-39283492-4",
-    // [A CONFIRMAR] mientras esté entre corchetes no se muestra en la web
-    razonSocialRepuestos: "[RAZÓN SOCIAL DE LA SOCIEDAD NUEVA]",
   },
 };
 
