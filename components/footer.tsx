@@ -45,7 +45,7 @@ export async function Footer() {
               {site.direccion.codigoPostal})<br />
               WhatsApp +54 9 2235 30-2965
               <br />
-              Lun a vie 8 a 17 · Sáb 8 a 13
+              Lun a vie 8 a 17 hs · Sáb 8 a 13 hs
             </p>
           </Columna>
           <Columna titulo="BLOG">
@@ -61,9 +61,6 @@ export async function Footer() {
         <div className="flex flex-col justify-between gap-4 border-t border-linea pt-6 md:flex-row">
           <span className="text-sm text-gris">
             © {anio} {site.nombre}. Todos los derechos reservados.
-          </span>
-          <span className="text-sm text-gris">
-            Repuestos Faisal: {site.legal.razonSocialRepuestos}
           </span>
         </div>
       </div>

@@ -46,7 +46,7 @@ const item: Variants = {
 function Marca() {
   return (
     <Link
-      href="#inicio"
+      href="/#inicio"
       aria-label={`${site.nombre}, inicio`}
       className="flex flex-col leading-none text-white no-underline transition-opacity duration-200 hover:opacity-80"
     >
@@ -87,7 +87,7 @@ export function Header() {
             </a>
           ))}
           <a
-            href="#repuestos"
+            href="/#repuestos"
             className="link-anim text-[15px] font-bold text-amarillo no-underline"
           >
             Repuestos
@@ -139,7 +139,7 @@ export function Header() {
               </m.a>
             ))}
             <m.a
-              href="#repuestos"
+              href="/#repuestos"
               onClick={cerrar}
               variants={item}
               className="flex min-h-[52px] items-center text-lg font-bold text-amarillo no-underline"

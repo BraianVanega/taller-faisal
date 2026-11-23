@@ -4,7 +4,7 @@ import { Reveal } from "@/components/ui/motion";
 import { Seccion, TituloSeccion } from "@/components/ui/titulo";
 import { site } from "@/data/site";
 
-// Fotos en public/fotos. El nombre tiene que coincidir exacto, con .JPG en mayúscula.
+
 const TRABAJOS = [
   { src: "/fotos/foto1.jpg", alt: "Mecánico revisando la rueda de una camioneta en el elevador" },
   { src: "/fotos/foto2.jpg", alt: "Auto en el elevador con la rueda delantera desmontada" },

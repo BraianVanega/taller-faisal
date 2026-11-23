@@ -78,11 +78,10 @@ export const site = {
     { autor: "Andrés F.", cuando: "Hace 2 años", texto: "Si pudiera darle más estrellas a este equipo, sin duda alguna lo haría..\n\nResulta que me faltaban unas piezas importantes del Caliper, sin dudarlo Rodrigo decidió ayudarme a pesar de que tenía mucho trabajo, debo agradecer enormemente a este genio que me dio una solución inmediata … se nota el profesionalismo. Muy amable.. excelente el equipo nada que decir un 7.. saludos y un abrazo enorme a la distancia y muchas muchas gracias por todo ..\n\nPuerto Natales, Chile.🇨🇱" },
   ] satisfies Resena[],
 
-  // [A CONFIRMAR] Datos legales para el pie.
+  // Datos legales para el pie.
   legal: {
-    razonSocialTaller: "[RAZÓN SOCIAL]",
-    cuitTaller: "[XX-XXXXXXXX-X]",
-    razonSocialRepuestos: "[RAZÓN SOCIAL DE LA SOCIEDAD NUEVA]",
+    razonSocialTaller: "Rodrigo Faisal",
+    cuitTaller: "20-39283492-4",
   },
 };
 
