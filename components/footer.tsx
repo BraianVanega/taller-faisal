@@ -54,20 +54,8 @@ export async function Footer() {
             </Link>
           </Columna>
           <Columna titulo="REDES">
-            <a
-              href={site.redes.instagramTaller}
-              className="inline-flex min-h-8 items-center gap-2 text-[15px] text-white"
-            >
-              <IconInstagram size={18} />
-              @centrodeserviciofaisal
-            </a>
-            <a
-              href={site.redes.instagramRepuestos}
-              className="inline-flex min-h-8 items-center gap-2 text-[15px] text-amarillo"
-            >
-              <IconInstagram size={18} />
-              @repuestosfaisal
-            </a>
+            <a href={site.redes.instagramTaller} className="inline-flex min-h-8 items-center gap-2 text-[15px] text-white"><IconInstagram size={18} /><span className="link-anim">@centrodeserviciofaisal</span></a>
+            <a href={site.redes.instagramRepuestos} className="inline-flex min-h-8 items-center gap-2 text-[15px] text-amarillo"><IconInstagram size={18} /><span className="link-anim">@repuestosfaisal</span></a>
           </Columna>
         </div>
         <div className="flex flex-col justify-between gap-4 border-t border-linea pt-6 md:flex-row">

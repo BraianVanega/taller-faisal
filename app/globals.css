@@ -33,3 +33,69 @@ section[id] {
   outline: 3px solid var(--color-azul-texto);
   outline-offset: 3px;
 }
+
+/* ------------------------------------------------------------------
+   Animaciones de todo lo clickeable
+   · .link-anim → links de texto: aparece un subrayado de izquierda a derecha.
+     Si el link tiene ícono, la clase va en el <span> del texto y se activa
+     al pasar por todo el link.
+   · .btn-anim  → botones: suben 2 px y se iluminan; al tocar se hunden.
+   El efecto de pasar el mouse solo existe en compu (hover: hover).
+   En celular queda el efecto al tocar.
+   ------------------------------------------------------------------ */
+@layer components {
+  .link-anim {
+    position: relative;
+    transition: color 200ms ease;
+  }
+  .link-anim::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -3px;
+    height: 2px;
+    background: currentColor;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 280ms ease;
+  }
+
+  .btn-anim {
+    transition: transform 200ms ease, filter 200ms ease, background-color 200ms ease,
+      border-color 200ms ease, color 200ms ease;
+  }
+  .btn-anim:active {
+    transform: translateY(0) scale(0.97);
+  }
+
+  @media (hover: hover) {
+    .link-anim:hover::after,
+    a:hover > .link-anim::after,
+    button:hover > .link-anim::after {
+      transform: scaleX(1);
+      transform-origin: left;
+    }
+    .btn-anim:hover {
+      transform: translateY(-2px);
+      filter: brightness(1.12);
+    }
+  }
+
+  /* Con teclado se ve igual que con el mouse. */
+  .link-anim:focus-visible::after,
+  a:focus-visible > .link-anim::after {
+    transform: scaleX(1);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .link-anim::after,
+    .btn-anim {
+      transition: none;
+    }
+    .btn-anim:hover,
+    .btn-anim:active {
+      transform: none;
+    }
+  }
+}

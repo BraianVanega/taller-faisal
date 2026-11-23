@@ -38,7 +38,7 @@ export function Ubicacion() {
             </tbody>
           </table>
 
-          <a href={COMO_LLEGAR} className="flex min-h-[52px] items-center justify-center gap-3 border-2 border-linea px-6 text-[17px] font-semibold text-white no-underline">
+          <a href={COMO_LLEGAR} className="btn-anim flex min-h-[52px] items-center justify-center gap-3 border-2 border-linea px-6 hover:border-azul-texto hover:bg-azul/10 text-[17px] font-semibold text-white no-underline">
             <IconMap size={22} />Cómo llegar
           </a>
         </div>

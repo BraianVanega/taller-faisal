@@ -23,11 +23,11 @@ export function Repuestos() {
           </p>
           <div className="flex flex-col items-stretch gap-3 md:flex-row md:items-center md:gap-6">
             <a href={URL_REPUESTOS}
-              className="flex min-h-[52px] items-center justify-center bg-amarillo px-7 text-[17px] font-bold text-fondo no-underline [clip-path:polygon(0_0,100%_0,calc(100%_-_12px)_100%,0_100%)]">
+              className="btn-anim flex min-h-[52px] items-center justify-center bg-amarillo px-7 text-[17px] font-bold text-fondo no-underline [clip-path:polygon(0_0,100%_0,calc(100%_-_12px)_100%,0_100%)]">
               Ver Repuestos Faisal
             </a>
             <a href={site.redes.instagramRepuestos} className="flex min-h-11 items-center justify-center gap-2.5 text-base font-semibold text-amarillo md:justify-start">
-              <IconInstagram size={20} />@repuestosfaisal
+              <IconInstagram size={20} /><span className="link-anim">@repuestosfaisal</span>
             </a>
           </div>
         </div>

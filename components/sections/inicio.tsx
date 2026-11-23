@@ -1,7 +1,7 @@
+import Image from "next/image";
 import { AbiertoAhora } from "@/components/abierto-ahora";
 import { IconCheck, IconClock, IconPin } from "@/components/icons";
 import { Reveal } from "@/components/ui/motion";
-import { Placeholder } from "@/components/ui/placeholder";
 import { site } from "@/data/site";
 
 function Dato({ icono, titulo, children }: { icono: React.ReactNode; titulo: string; children: React.ReactNode }) {
@@ -36,8 +36,16 @@ export function Inicio() {
         </Reveal>
 
         <Reveal delay={0.1} className="flex flex-col gap-10 md:gap-7">
-          {/* [FOTO REAL] reemplazar por next/image cuando lleguen las fotos */}
-          <Placeholder label="[FOTO DEL FRENTE DEL TALLER O DEL EQUIPO]" className="h-[300px] md:h-[420px]" />
+          {/* Foto de portada: está en public/fotos/portada.jpg */}
+          <Image
+            src="/fotos/portada.jpg"
+            alt="Frente de Centro de Servicio Faisal en Av. Mario Bravo y Pescadores"
+            width={2400}
+            height={1350}
+            preload
+            sizes="(min-width: 1296px) 1200px, calc(100vw - 40px)"
+            className="h-[300px] w-full object-cover md:h-[420px]"
+          />
 
           {/* Celular: horarios debajo de la foto */}
           <p className="flex items-start gap-2.5 text-base leading-normal text-gris md:hidden">
