@@ -26,6 +26,11 @@ export function JsonLd() {
     aggregateRating: { "@type": "AggregateRating", ratingValue: site.calificacion.promedio, reviewCount: site.calificacion.cantidad },
     sameAs: [site.redes.instagramTaller],
   };
+  return <JsonLdScript datos={datos} />;
+}
+
+/** Inserta cualquier bloque de datos estructurados (escapa `<` para evitar inyección). */
+export function JsonLdScript({ datos }: { datos: object }) {
   return (
     <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify(datos).replace(/</g, "\\u003c") }} />
