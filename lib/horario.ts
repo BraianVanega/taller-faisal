@@ -18,7 +18,7 @@ export function estadoTaller(ahora: Date = new Date()): string {
   const aMin = (h: string) => Number(h.slice(0, 2)) * 60 + Number(h.slice(3, 5));
 
   if (franja?.desde && franja.hasta && minutos >= aMin(franja.desde) && minutos < aMin(franja.hasta)) {
-    return `Abierto ahora · cierra a las ${Number(franja.hasta.slice(0, 2))}`;
+    return `Abierto ahora · cierra a las ${Number(franja.hasta.slice(0, 2))} hs`;
   }
   return "Cerrado ahora · escribinos y te respondemos al abrir";
 }

@@ -49,12 +49,12 @@ export function Inicio() {
           {/* Celular: horarios debajo de la foto */}
           <p className="flex items-start gap-2.5 text-base leading-normal text-gris md:hidden">
             <IconClock size={20} className="mt-0.5 shrink-0 text-azul-texto" />
-            Lunes a viernes de 8 a 17 · Sábados de 8 a 13
+            Lunes a viernes de 8 a 17 hs · Sábados de 8 a 13 hs
           </p>
 
           {/* Escritorio: franja de datos */}
           <div className="hidden flex-wrap border-y border-linea md:flex">
-            <Dato icono={<IconClock />} titulo="Horarios"><span className="text-[17px] font-semibold">Lun a vie 8 a 17 · Sáb 8 a 13</span></Dato>
+            <Dato icono={<IconClock />} titulo="Horarios"><span className="text-[17px] font-semibold">Lun a vie 8 a 17 hs · Sáb 8 a 13 hs</span></Dato>
             <Dato icono={<IconPin />} titulo="Dirección"><span className="text-[17px] font-semibold">{site.direccion.calle} esq. Pescadores</span></Dato>
             <Dato icono={<IconCheck />} titulo="Hoy"><AbiertoAhora /></Dato>
           </div>

@@ -45,7 +45,7 @@ export async function Footer() {
               {site.direccion.codigoPostal})<br />
               WhatsApp +54 9 2235 30-2965
               <br />
-              Lun a vie 8 a 17 · Sáb 8 a 13
+              Lun a vie 8 a 17 hs · Sáb 8 a 13 hs
             </p>
           </Columna>
           <Columna titulo="BLOG">

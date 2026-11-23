@@ -3,7 +3,7 @@
 import { useSyncExternalStore } from "react";
 import { estadoTaller } from "@/lib/horario";
 
-const HORARIOS = "Lun a vie 8 a 17 · Sáb 8 a 13";
+const HORARIOS = "Lun a vie 8 a 17 hs · Sáb 8 a 13 hs";
 
 // Avisa a React cada un minuto para que vuelva a mirar la hora.
 function suscribirse(avisar: () => void) {
