@@ -53,6 +53,11 @@ export function JsonLd() {
     },
     sameAs: [site.redes.instagramTaller, site.redes.googleMaps],
   };
+  return <JsonLdScript datos={datos} />;
+}
+
+/** Inserta cualquier bloque de datos estructurados (escapa `<` para evitar inyección). */
+export function JsonLdScript({ datos }: { datos: object }) {
   return (
     <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify(datos).replace(/</g, "\\u003c") }} />
