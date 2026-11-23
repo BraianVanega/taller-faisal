@@ -6,11 +6,12 @@ import { IconClose, IconMenu, IconPhone } from "@/components/icons";
 import { site } from "@/data/site";
 
 const NAV = [
-  { href: "#servicios", label: "Servicios" },
-  { href: "#trabajos", label: "Trabajos" },
-  { href: "#como-trabajamos", label: "Cómo trabajamos" },
-  { href: "#resenas", label: "Reseñas" },
-  { href: "#ubicacion", label: "Ubicación" },
+  { href: "/#servicios", label: "Servicios" },
+  { href: "/#trabajos", label: "Trabajos" },
+  { href: "/#como-trabajamos", label: "Cómo trabajamos" },
+  { href: "/#resenas", label: "Reseñas" },
+  { href: "/#ubicacion", label: "Ubicación" },
+  { href: "/blog", label: "Blog" },
 ];
 
 // Menú de celular: se despliega como una persiana y las secciones entran una por una.
@@ -35,7 +36,7 @@ function Marca() {
     <a href="#inicio" aria-label={`${site.nombre}, inicio`} className="flex flex-col leading-none text-white no-underline transition-opacity duration-200 hover:opacity-80">
       <span className="text-[11px] font-bold tracking-[2.5px] text-[#dce6ff] md:text-xs">CENTRO DE SERVICIO</span>
       <span className="font-display text-[30px] font-black italic tracking-[0.5px] md:text-4xl">FAISAL</span>
-    </a>
+    </Link>
   );
 }
 

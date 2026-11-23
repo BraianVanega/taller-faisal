@@ -1,5 +1,8 @@
 import type { Metadata, Viewport } from "next";
 import { Barlow_Condensed, Open_Sans } from "next/font/google";
+import { Analytics } from "@vercel/analytics/next";
+import { PrismicPreview } from "@prismicio/next";
+import { repositoryName } from "@/prismicio";
 import { MotionProvider } from "@/components/ui/motion";
 import { site } from "@/data/site";
 import "./globals.css";
@@ -56,7 +59,9 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
     <html lang="es-AR" className={`${display.variable} ${sans.variable}`}>
       <body className="bg-fondo font-sans text-white antialiased">
         <MotionProvider>{children}</MotionProvider>
+        <Analytics />
       </body>
+      <PrismicPreview repositoryName={repositoryName} />
     </html>
   );
 }

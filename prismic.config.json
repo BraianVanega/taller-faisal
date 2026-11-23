@@ -1,0 +1,9 @@
+{
+  "repositoryName": "taller-faisal",
+  "routes": [
+    {
+      "type": "blog_post",
+      "path": "/blog/:uid"
+    }
+  ]
+}
