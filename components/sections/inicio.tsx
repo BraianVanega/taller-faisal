@@ -36,9 +36,8 @@ export function Inicio() {
         </Reveal>
 
         <Reveal delay={0.1} className="flex flex-col gap-10 md:gap-7">
-          {/* Foto de portada: está en public/fotos/portada.jpg */}
           <Image
-            src="/fotos/portada.jpg"
+            src="/fotos/portada-cielo-despejado.jpg"
             alt="Frente de Centro de Servicio Faisal en Av. Mario Bravo y Pescadores"
             width={2400}
             height={1350}

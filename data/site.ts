@@ -80,9 +80,8 @@ export const site = {
 
   // [A CONFIRMAR] Datos legales para el pie.
   legal: {
-    razonSocialTaller: "[RAZÓN SOCIAL]",
-    cuitTaller: "[XX-XXXXXXXX-X]",
-    razonSocialRepuestos: "[RAZÓN SOCIAL DE LA SOCIEDAD NUEVA]",
+    razonSocialTaller: "[Rodrigo Faisal]",
+    cuitTaller: "[20-39283492-4]",
   },
 };
 

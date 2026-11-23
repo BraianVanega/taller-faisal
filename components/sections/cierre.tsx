@@ -1,4 +1,3 @@
-/** Franja de cierre después de Ubicación (pedido de Braian, solo escritorio). */
 export function Cierre() {
   return (
     <div className="hidden bg-azul px-12 py-9 [clip-path:polygon(0_14px,100%_0,100%_100%,0_100%)] md:block">
