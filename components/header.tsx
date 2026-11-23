@@ -1,24 +1,26 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
 import { m, AnimatePresence } from "motion/react";
 import { IconClose, IconMenu, IconPhone } from "@/components/icons";
 import { site } from "@/data/site";
 
 const NAV = [
-  { href: "#servicios", label: "Servicios" },
-  { href: "#trabajos", label: "Trabajos" },
-  { href: "#como-trabajamos", label: "Cómo trabajamos" },
-  { href: "#resenas", label: "Reseñas" },
-  { href: "#ubicacion", label: "Ubicación" },
+  { href: "/#servicios", label: "Servicios" },
+  { href: "/#trabajos", label: "Trabajos" },
+  { href: "/#como-trabajamos", label: "Cómo trabajamos" },
+  { href: "/#resenas", label: "Reseñas" },
+  { href: "/#ubicacion", label: "Ubicación" },
+  { href: "/blog", label: "Blog" },
 ];
 
 function Marca() {
   return (
-    <a href="#inicio" aria-label={`${site.nombre}, inicio`} className="flex flex-col leading-none text-white no-underline">
+    <Link href="/#inicio" aria-label={`${site.nombre}, inicio`} className="flex flex-col leading-none text-white no-underline">
       <span className="text-[11px] font-bold tracking-[2.5px] text-[#dce6ff] md:text-xs">CENTRO DE SERVICIO</span>
       <span className="font-display text-[30px] font-black italic tracking-[0.5px] md:text-4xl">FAISAL</span>
-    </a>
+    </Link>
   );
 }
 
@@ -37,9 +39,9 @@ export function Header() {
         {/* Escritorio */}
         <nav aria-label="Principal" className="hidden items-center gap-7 md:flex">
           {NAV.map((n) => (
-            <a key={n.href} href={n.href} className="text-[15px] font-semibold text-white no-underline hover:text-azul-texto">{n.label}</a>
+            <Link key={n.href} href={n.href} className="text-[15px] font-semibold text-white no-underline hover:text-azul-texto">{n.label}</Link>
           ))}
-          <a href="#repuestos" className="text-[15px] font-bold text-amarillo no-underline">Repuestos</a>
+          <Link href="/#repuestos" className="text-[15px] font-bold text-amarillo no-underline">Repuestos</Link>
         </nav>
 
         {/* Celular */}
@@ -58,9 +60,9 @@ export function Header() {
             initial={{ opacity: 0, y: -8 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -8 }} transition={{ duration: 0.25 }}
             className="absolute inset-x-0 top-full flex flex-col border-y border-linea bg-fondo px-5 pb-3 pt-2 shadow-[0_12px_24px_rgba(0,0,0,0.5)] md:hidden">
             {NAV.map((n) => (
-              <a key={n.href} href={n.href} onClick={cerrar} className="flex min-h-[52px] items-center border-b border-linea text-lg font-semibold text-white no-underline">{n.label}</a>
+              <Link key={n.href} href={n.href} onClick={cerrar} className="flex min-h-[52px] items-center border-b border-linea text-lg font-semibold text-white no-underline">{n.label}</Link>
             ))}
-            <a href="#repuestos" onClick={cerrar} className="flex min-h-[52px] items-center text-lg font-bold text-amarillo no-underline">Repuestos Faisal</a>
+            <Link href="/#repuestos" onClick={cerrar} className="flex min-h-[52px] items-center text-lg font-bold text-amarillo no-underline">Repuestos Faisal</Link>
           </m.nav>
         )}
       </AnimatePresence>

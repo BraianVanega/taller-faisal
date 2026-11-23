@@ -1,0 +1,113 @@
+{
+  "format": "page",
+  "id": "blog_post",
+  "json": {
+    "Main": {
+      "uid": {
+        "config": {
+          "label": "UID"
+        },
+        "type": "UID"
+      },
+      "title": {
+        "config": {
+          "label": "Título",
+          "single": "heading1"
+        },
+        "type": "StructuredText"
+      },
+      "excerpt": {
+        "config": {
+          "label": "Bajada (resumen para el listado)"
+        },
+        "type": "Text"
+      },
+      "answer": {
+        "config": {
+          "label": "Respuesta directa (2-3 oraciones)",
+          "multi": "paragraph,strong,em"
+        },
+        "type": "StructuredText"
+      },
+      "category": {
+        "config": {
+          "default_value": "Consejos",
+          "label": "Categoría",
+          "options": [
+            "Frenos",
+            "Mantenimiento",
+            "VTV",
+            "Viajes",
+            "Tren delantero",
+            "Consejos"
+          ]
+        },
+        "type": "Select"
+      },
+      "cover": {
+        "config": {
+          "label": "Imagen de portada"
+        },
+        "type": "Image"
+      },
+      "body": {
+        "config": {
+          "label": "Cuerpo",
+          "multi": "heading2,heading3,paragraph,strong,em,hyperlink,list-item,o-list-item,image"
+        },
+        "type": "StructuredText"
+      },
+      "faq": {
+        "config": {
+          "fields": {
+            "question": {
+              "config": {
+                "label": "Pregunta"
+              },
+              "type": "Text"
+            },
+            "answer": {
+              "config": {
+                "label": "Respuesta",
+                "multi": "paragraph,strong,em,hyperlink"
+              },
+              "type": "StructuredText"
+            }
+          },
+          "label": "Preguntas frecuentes"
+        },
+        "type": "Group"
+      }
+    },
+    "SEO & Metadata": {
+      "meta_title": {
+        "config": {
+          "label": "Meta Title",
+          "placeholder": "A title of the page used for social media and search engines"
+        },
+        "type": "Text"
+      },
+      "meta_description": {
+        "config": {
+          "label": "Meta Description",
+          "placeholder": "A brief summary of the page"
+        },
+        "type": "Text"
+      },
+      "meta_image": {
+        "config": {
+          "constraint": {
+            "height": 1260,
+            "width": 2400
+          },
+          "label": "Meta Image",
+          "thumbnails": []
+        },
+        "type": "Image"
+      }
+    }
+  },
+  "label": "Blog Post",
+  "repeatable": true,
+  "status": true
+}

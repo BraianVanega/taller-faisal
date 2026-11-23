@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { IconInstagram } from "@/components/icons";
 import { site } from "@/data/site";
 
@@ -46,6 +47,11 @@ export async function Footer() {
               <br />
               Lun a vie 8 a 17 · Sáb 8 a 13
             </p>
+          </Columna>
+          <Columna titulo="BLOG">
+            <Link href="/blog" className="inline-flex min-h-8 items-center text-[15px] text-white">
+              Consejos para tu auto
+            </Link>
           </Columna>
           <Columna titulo="REDES">
             <a
