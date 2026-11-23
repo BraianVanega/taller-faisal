@@ -13,7 +13,7 @@ export const site = {
   nombre: "Centro de Servicio Faisal",
   descripcionCorta: "Taller mecánico de Mar del Plata",
   frase: "Trabajamos con presupuesto previo y te explicamos cada arreglo.",
-  url: "https://tallerfaisal.com.ar",
+  url: "https://www.tallerfaisal.com.ar",
 
   direccion: {
     calle: "Av. Mario Bravo 3108",
