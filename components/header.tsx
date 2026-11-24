@@ -12,6 +12,7 @@ const NAV = [
   { href: "/#como-trabajamos", label: "Cómo trabajamos" },
   { href: "/#resenas", label: "Reseñas" },
   { href: "/#ubicacion", label: "Ubicación" },
+  { href: "/#mi-garage", label: "Mi Garage" },
   { href: "/blog", label: "Blog" },
 ];
 
@@ -75,27 +76,27 @@ export function Header() {
         {/* Escritorio */}
         <nav
           aria-label="Principal"
-          className="hidden items-center gap-7 md:flex"
+          className="hidden items-center gap-6 lg:flex"
         >
           {NAV.map((n) => (
-            <a
+            <Link
               key={n.href}
               href={n.href}
               className="link-anim text-[15px] font-semibold text-white no-underline hover:text-azul-texto"
             >
               {n.label}
-            </a>
+            </Link>
           ))}
-          <a
+          <Link
             href="/#repuestos"
             className="link-anim text-[15px] font-bold text-amarillo no-underline"
           >
             Repuestos
-          </a>
+          </Link>
         </nav>
 
         {/* Celular */}
-        <div className="flex gap-2 md:hidden">
+        <div className="flex gap-2 lg:hidden">
           <a
             href={`tel:${site.telefono}`}
             aria-label="Llamar al taller"
@@ -125,7 +126,7 @@ export function Header() {
             initial="cerrado"
             animate="abierto"
             exit="cerrado"
-            className="absolute inset-x-0 top-full flex flex-col border-y border-linea bg-fondo px-5 pb-3 pt-2 shadow-[0_12px_24px_rgba(0,0,0,0.5)] md:hidden"
+            className="absolute inset-x-0 top-full flex flex-col border-y border-linea bg-fondo px-5 pb-3 pt-2 shadow-[0_12px_24px_rgba(0,0,0,0.5)] lg:hidden"
           >
             {NAV.map((n) => (
               <m.a
