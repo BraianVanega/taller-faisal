@@ -4,6 +4,7 @@ import { JsonLd } from "@/components/json-ld";
 import { Cierre } from "@/components/sections/cierre";
 import { ComoTrabajamos } from "@/components/sections/como-trabajamos";
 import { Inicio } from "@/components/sections/inicio";
+import { MiGarage } from "@/components/sections/mi-garage";
 import { Repuestos } from "@/components/sections/repuestos";
 import { Resenas } from "@/components/sections/resenas";
 import { Servicios } from "@/components/sections/servicios";
@@ -28,6 +29,7 @@ export default function Home() {
         <Ubicacion />
         <Cierre />
         <Repuestos />
+        <MiGarage />
       </main>
       <Footer />
       <WhatsAppFlotante />
