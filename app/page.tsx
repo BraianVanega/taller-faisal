@@ -26,10 +26,10 @@ export default function Home() {
         <Trabajos />
         <ComoTrabajamos />
         <Resenas />
-        <Ubicacion />
-        <Cierre />
         <Repuestos />
         <MiGarage />
+        <Ubicacion />
+        <Cierre />
       </main>
       <Footer />
       <WhatsAppFlotante />
