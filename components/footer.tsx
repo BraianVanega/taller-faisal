@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { IconInstagram } from "@/components/icons";
-import { site } from "@/data/site";
+import { site, whatsappUrl } from "@/data/site";
+import { VolverInicio } from "@/components/volver-inicio";
 
 function Columna({
   titulo,
@@ -27,14 +28,15 @@ export async function Footer() {
       <div className="mx-auto flex max-w-[1200px] flex-col gap-10">
         <div className="flex flex-wrap gap-8">
           <Columna titulo="TALLER">
-            <div className="flex flex-col leading-none">
+            <VolverInicio ariaLabel="Centro de Servicio Faisal, volver al inicio"
+              className="flex flex-col self-start leading-none text-white no-underline transition-opacity duration-200 hover:opacity-80">
               <span className="text-[11px] font-bold tracking-[2.5px] text-[#dce6ff]">
                 CENTRO DE SERVICIO
               </span>
               <span className="font-display text-[30px] font-black italic">
                 FAISAL
               </span>
-            </div>
+            </VolverInicio>
             <p className="text-[15px] leading-relaxed text-gris">
               {site.legal.razonSocialTaller} · CUIT {site.legal.cuitTaller}
             </p>
@@ -43,14 +45,14 @@ export async function Footer() {
             <p className="text-[15px] leading-relaxed text-gris">
               {site.direccion.calle} esq. Pescadores, {site.direccion.ciudad} (
               {site.direccion.codigoPostal})<br />
-              WhatsApp +54 9 2235 30-2965
-              <br />
               Lun a vie 8 a 17 hs · Sáb 8 a 13 hs
+              <br />
+              <a href={whatsappUrl()} className="link-anim text-white">WhatsApp +54 9 2235 30-2965</a>
             </p>
           </Columna>
           <Columna titulo="BLOG">
             <Link href="/blog" className="inline-flex min-h-8 items-center text-[15px] text-white">
-              Consejos para tu auto
+              <span className="link-anim">Consejos para tu auto</span>
             </Link>
           </Columna>
           <Columna titulo="REDES">

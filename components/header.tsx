@@ -5,6 +5,7 @@ import { useState } from "react";
 import { m, AnimatePresence, type Variants } from "motion/react";
 import { IconClose, IconMenu, IconPhone } from "@/components/icons";
 import { site } from "@/data/site";
+import { VolverInicio } from "@/components/volver-inicio";
 
 const NAV = [
   { href: "/#servicios", label: "Servicios" },
@@ -35,10 +36,10 @@ const item: Variants = {
 
 function Marca() {
   return (
-    <Link href="/#inicio" aria-label={`${site.nombre}, inicio`} className="flex flex-col leading-none text-white no-underline transition-opacity duration-200 hover:opacity-80">
+    <VolverInicio ariaLabel={`${site.nombre}, volver al inicio`} className="flex flex-col leading-none text-white no-underline transition-opacity duration-200 hover:opacity-80">
       <span className="text-[11px] font-bold tracking-[2.5px] text-[#dce6ff] md:text-xs">CENTRO DE SERVICIO</span>
       <span className="font-display text-[30px] font-black italic tracking-[0.5px] md:text-4xl">FAISAL</span>
-    </Link>
+    </VolverInicio>
   );
 }
 
