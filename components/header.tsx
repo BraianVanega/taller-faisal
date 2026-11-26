@@ -1,9 +1,9 @@
 "use client";
 
 import { IconClose, IconMenu, IconPhone } from "@/components/icons";
+import { VolverInicio } from "@/components/volver-inicio";
 import { site } from "@/data/site";
 import { AnimatePresence, m, type Variants } from "motion/react";
-import Link from "next/link";
 import { useState } from "react";
 
 const NAV = [
@@ -11,8 +11,8 @@ const NAV = [
   { href: "/#trabajos", label: "Trabajos" },
   { href: "/#como-trabajamos", label: "Cómo trabajamos" },
   { href: "/#resenas", label: "Reseñas" },
-  { href: "/#ubicacion", label: "Ubicación" },
   { href: "/#mi-garage", label: "Mi Garage" },
+  { href: "/#ubicacion", label: "Ubicación" },
   { href: "/blog", label: "Blog" },
 ];
 
@@ -46,9 +46,8 @@ const item: Variants = {
 
 function Marca() {
   return (
-    <Link
-      href="/#inicio"
-      aria-label={`${site.nombre}, inicio`}
+    <VolverInicio
+      ariaLabel={`${site.nombre}, volver al inicio`}
       className="flex flex-col leading-none text-white no-underline transition-opacity duration-200 hover:opacity-80"
     >
       <span className="text-[11px] font-bold tracking-[2.5px] text-[#dce6ff] md:text-xs">
@@ -57,7 +56,7 @@ function Marca() {
       <span className="font-display text-[30px] font-black italic tracking-[0.5px] md:text-4xl">
         FAISAL
       </span>
-    </Link>
+    </VolverInicio>
   );
 }
 

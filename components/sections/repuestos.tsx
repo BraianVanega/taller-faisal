@@ -3,8 +3,7 @@ import { IconInstagram } from "@/components/icons";
 import { Reveal } from "@/components/ui/motion";
 import { site } from "@/data/site";
 
-// [URL DE LA LANDING DE REPUESTOS] cambiar cuando esté publicada.
-const URL_REPUESTOS = "#repuestos";
+const URL_REPUESTOS = "https://repuestos.tallerfaisal.com.ar";
 
 export function Repuestos() {
   return (
