@@ -4,6 +4,7 @@ import { IconClose, IconMenu, IconPhone } from "@/components/icons";
 import { VolverInicio } from "@/components/volver-inicio";
 import { site } from "@/data/site";
 import { AnimatePresence, m, type Variants } from "motion/react";
+import Link from "next/link";
 import { useState } from "react";
 
 const NAV = [
